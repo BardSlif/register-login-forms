@@ -8,8 +8,21 @@ body {
 
 .app {
     height: 100vh;
-    background-image: url('../assets/images/background.jpg');
+    background-image: url('../assets/images/background2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.half {
+    width: 50%;
+    border: 1px solid white;
+    position: relative;
+}
+
+.form {
+    background-color: #181818;
+    opacity: 0.15;
 }

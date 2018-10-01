@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+:root {
+    --base-font-size: 16px;
+    --standard-font: 'Arimo', sans-serif;
+    --headline-font: 'Lobster', cursive;
+    --standard-color: #e1e3ea;
+    --orange-color: #c57633;
+}
+

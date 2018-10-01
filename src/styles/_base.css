@@ -1,2 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--standard-font);
+    font-size: var(--base-font-size);
+    color: var(--standard-color);
+}
 
-
+.app {
+    height: 100vh;
+    background-image: url('../assets/images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

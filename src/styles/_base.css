@@ -6,6 +6,16 @@ body {
     color: var(--standard-color);
 }
 
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-regular);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-regular);
+}
+
 .app {
     height: 100vh;
     background-image: url('../assets/images/background2.jpg');
@@ -22,7 +32,6 @@ body {
     position: relative;
 }
 
-.form {
-    background-color: #181818;
-    opacity: 0.15;
+.headline {
+    font-family: var(--headline-font);
 }

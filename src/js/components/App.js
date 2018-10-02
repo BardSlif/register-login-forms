@@ -5,12 +5,12 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <section className='half'>
+        <section className='half left'>
 
         </section>
-        <section class Name='half form'>
+        <section className='half form-section'>
           <Form
-            
+
           />
         </section>
       </div>

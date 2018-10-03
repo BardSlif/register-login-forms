@@ -12,10 +12,10 @@ class FormSection extends Component {
             confirmPassword: ''
         },
         error: {
-            name: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
+            name: null,
+            email: null,
+            password: null,
+            confirmPassword: null
         }
     }
 
@@ -29,43 +29,73 @@ class FormSection extends Component {
             }
         }), () => {
             this._validationType(target.name);
+            console.log(this.state.error);
+            console.log(this.state.user);
         });
 
     }
 
+
     _validationType = (name) => {
 
         switch (name) {
+            case 'name': {
+                //console.log(this.state.user.name);
+                this._validateUsername(this.state.user.name);
+                break;
+            }
             case 'email': {
-                console.log(this.state.user.email);
+                //console.log(this.state.user.email);
                 this._validateEmail(this.state.user.email);
                 break;
             }
             case 'password': {
-                console.log(this.state.user.password);
+                //console.log(this.state.user.password);
+                this._validatePassword(this.state.user.password);
                 break;
             }
             case 'confirmPassword': {
-                console.log(this.state.user.confirmPassword);
+                //console.log(this.state.user.confirmPassword);
+                this._confirmPassword();
                 break;
             }
             default: {
-                console.log(this.state.user.name);
                 break;
             }
         }
     }
 
-    _onSubmit = (evt) => {
-        evt.preventDefault();
+    _validateUsername = (name) => {
+
+        let errorType = '';
+
+        if (name.length < 4 || name.length > 20) {
+            errorType = 'Username should have at least 4 characters and no more than 20';
+        }
+        else {
+            if (this._usernameRegEx(name)) {
+                errorType = null;
+            }
+            else {
+                errorType = 'Can contain only a-z, 0-9, underscore and periods. Cannot end and start with period.';
+            }
+        }
+
+        this.setState(prevState => ({
+            error: {
+                ...prevState.error,
+                name: errorType
+            }
+        }), () => console.log('name: ', this.state.error.name)
+        );
     }
 
     _validateEmail = (email) => {
 
         let errorType = '';
 
-        if (this._emailRegExp(email)) {
-            errorType = '';
+        if (this._emailRegEx(email)) {
+            errorType = null;
         }
         else {
             errorType = 'Invalid email';
@@ -76,13 +106,105 @@ class FormSection extends Component {
                 ...prevState.error,
                 email: errorType
             }
-        }), () => console.log(this.state.error.email)
+        }), () => console.log('email: ', this.state.error.email)
         );
     }
 
-    _emailRegExp = (email) => {
+    _validatePassword = (password) => {
+        let errorType = '';
+
+        if (password.length < 8) {
+            errorType = 'Password should have at least 8 characters';
+        }
+        else {
+            if (this._passwordRegEx(password)) {
+                errorType = null;
+            }
+            else {
+                errorType = 'Must contain at least 1 uppercase letter, 1 lowercase letter and 1 number. Can contain special characters.';
+            }
+        }
+
+        this.setState(prevState => ({
+            error: {
+                ...prevState.error,
+                password: errorType
+            }
+        }), () => console.log('password: ', this.state.error.password)
+        );
+    }
+
+    _confirmPassword = () => {
+        let errorType = '';
+        const password = this.state.user.password;
+        const confirmPassword = this.state.user.confirmPassword;
+
+        if (confirmPassword === password) {
+            errorType = null;
+        }
+        else {
+            errorType = 'Passwords dont matches';
+        }
+        this.setState(prevState => ({
+            error: {
+                ...prevState.error,
+                confirmPassword: errorType
+            }
+        }), () => console.log('confirmPassword: ', this.state.error.confirmPassword)
+        );
+
+    }
+
+    hasNull = (obj) => {
+        for (const child in obj) {
+            if (obj[child] === null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    hasEmpty = (obj) => {
+        for (const child in obj) {
+            if (obj[child] === '') {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    _emailRegEx = (email) => {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
+    }
+
+    _usernameRegEx = (name) => {
+        const reg = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/igm
+        return reg.test(name);
+    }
+
+    _passwordRegEx = (password) => {
+        const reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+        return reg.test(password);
+    }
+
+    _onSubmit = (evt) => {
+        evt.preventDefault();
+        const user = this.state.user;
+        const error = this.state.error;
+        if (this.hasEmpty(user)) {
+            console.log('One of the fields is empty!');
+        }
+        else {
+            console.log('All fields filled');
+        }
+        if(this.hasNull(error)) {
+            console.log('One of the field is not correct!');
+        }
+        else {
+            console.log('All correct!');
+        }
+
     }
 
     render() {

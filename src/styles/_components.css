@@ -20,6 +20,7 @@
 
 .form-group {
     margin-bottom: 32px;
+    position: relative;
 }
 
 .form-label, 
@@ -30,7 +31,7 @@
 
 .form-label {
     font-size: 15px;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 13px;
     margin-bottom: 8px;
     letter-spacing: 1px;
 }
@@ -38,9 +39,10 @@
 .form-control {
     padding: 14px 0;
     border-radius: 6px;
-    text-indent: 15px;
+    text-indent: 13px;
     font-size: 13px;
     background-color: var(--standard-color);
+    margin-bottom: 8px;
 }
 
 .form-center {
@@ -59,6 +61,10 @@
     font-size: 16px;
     background-color: var(--orange-color);
     cursor: pointer;
+}
+
+.form-button:hover {
+    transform: scale(1.05);
 }
 
 .under-button-text {
@@ -85,6 +91,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
+    color: transparent;
 }
 
 .social-link:hover {
@@ -105,3 +112,29 @@
     -webkit-mask-image: url('../assets/images/pinterest-logo.svg');
     mask-image: url('../assets/images/pinterest-logo.svg');
 }
+
+.form-icon {
+    position: absolute;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    right: 3%;
+    top: 52%;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.no-visible {
+    visibility: hidden;
+}
+
+.info-window {
+    position: absolute; 
+    font-size: 11px;
+    right: 0;
+    color: #ff3a3a; 
+}
+
+

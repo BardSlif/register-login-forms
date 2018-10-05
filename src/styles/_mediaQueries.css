@@ -1,4 +1,5 @@
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 320px) {
+    
     .left {
         width: 0%;
     }
@@ -7,113 +8,167 @@
         width: 100%;
         background-color: rgba(24, 24, 24, 0.7);
     }
-}
-
-@media screen and (max-width: 800px) {
-    h1 {
-        font-size: 4rem;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        font-size: 2.8rem;
-        margin-bottom: 10px;
-    }
 
     .section-wrapper {
-        padding: 100px 15px 30px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    .section-wrapper {
-        padding: 30px 5px 10px;
-    }
-    
-    h1 {
-        font-size: 3rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    .sign-up-form {
-        width: 90%;
-    }
-
-    .form-group {
-        margin-bottom: 22px;
-    }
-
-    .form-label {
-        font-size: 12px;
-    }
-
-    .form-control {
-        padding: 13px 0;
-    }
-
-    .social-link {
-        width: 24px;
-        height: 24px;
-    }
-    
-}
-
-
-@media screen and (max-width: 360px) {
-    .section-wrapper {
-        padding: 20px 5px 10px;
+        padding: 30px 8px 10px;
     }
 
     h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
     }
 
     h3 {
         font-size: 1.3rem;
+        margin-bottom: 40px;
     }
 
     .sign-up-form {
-        width: 90%;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
+        width: 100%;
     }
 
     .form-label {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .form-control {
         font-size: 12px;
         padding: 12px 0;
     }
-    
-    .form-button {
-        padding: 10px 0;
-        width: 150px;
-        font-size: 13px;
+
+    .form-group {
+        margin-bottom: 23px;
     }
 
     .social-link {
+        width: 22px;
+        height: 22px;
+    }
+
+    .form-center {
+        margin-bottom: 40px;
+    }
+
+    .info-window {
+        font-size: 11px;
+    }
+
+    .form-icon {
         width: 18px;
         height: 18px;
     }
+
+    .form-button {
+        width: 150px;
+        font-size: 13px;
+        padding: 13px 0;
+        margin: 0 auto 10px;
+    }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1024px) {
-    
-    .app {
-        height: 100vh;
-        background-attachment: fixed;
-    }
-    
+@media screen and (min-width: 375px) {
     .section-wrapper {
-        padding: 50px 15px 20px;
+        padding: 45px 10px 15px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-center {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .section-wrapper {
+        padding: 60px 10px 20px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-wrapper {
+        padding: 80px 10px 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .form-label {
+        font-size: 15px;
+    }
+
+    .info-window {
+        font-size: 12px;
+    }
+
+    .form-button {
+        font-size: 14px;
+    }
+
+    .social-link {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media screen and (min-width: 1080px)  {
+
+    .left {
+        width: 50%;
+    }
+
+    .form-section {
+        width: 50%;
+        background-color: rgba(24, 24, 24, 0.2);
+    }
+
+    .sign-up-form {
+        width: 70%;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: var(--h1-font-size);
+    }
+
+    h3 {
+        font-size: var(--h3-font-size);
+    }
+
+    .form-label {
+        font-size: var(--base-font-size);
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 14px 0;
+    }
+
+    .form-button {
+        width: 200px;
+        padding: 14px 0;
+        font-size: var(--base-font-size);
     }
 
     .social-link {
@@ -121,84 +176,8 @@
         height: 26px;
     }
 
-}
-
-@media screen and (max-width: 920px) and (orientation: landscape) {
-    
-    .app {
-        height: 100%;
+    .form-icon {
+        width: 20px;
+        height: 20px;
     }
-    
-    h1 {
-        font-size: 2.8rem;
-        margin-bottom: 30px;
-    }
-
-    h3 {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-    }
-    
-    .section-wrapper {
-        padding: 20px 5px 10px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    .form-label {
-        font-size: 12px;
-    }
-
-    .form-control {
-        font-size: 12px;
-        padding: 12px 0;
-    }
-
-    .form-center {
-        margin-bottom: 10px;
-    }
-
-    .social-link {
-        width: 24px;
-        height: 24px;
-    }
-
-}
-
-@media screen and (max-width: 720px) and (orientation: landscape) {
-    
-    h1 {
-        font-size: 2.4rem;
-        margin-bottom: 20px;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-        margin-bottom: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    .form-label {
-        font-size: 12px;
-    }
-
-    .form-control {
-        font-size: 12px;
-        padding: 12px 0;
-    }
-
-    .form-center {
-        margin-bottom: 15px;
-    }
-
-    .social-link {
-        width: 24px;
-        height: 24px;
-    }
-
 }

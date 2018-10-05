@@ -4,6 +4,7 @@
 :root {
     --font-weight-regular: 300;
     --base-font-size: 16px;
+    --small-font-size: 0.75rem;
     --h1-font-size: 3.25rem;
     --h3-font-size: 2rem;
     --standard-font: 'Arimo', sans-serif;

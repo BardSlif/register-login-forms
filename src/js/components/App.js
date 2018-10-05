@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './FormSection';
+import FormSection from './FormSection';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
 
         </section>
         <section className='half form-section'>
-          <Form
+          <FormSection
 
           />
         </section>

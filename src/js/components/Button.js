@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Button extends Component {
 
@@ -12,7 +13,16 @@ class Button extends Component {
         return (
             <div className='form-center'>
                 <input className='form-button' type="submit" value={this.props.value} onClick={this.onSubmitButton} />
-                <p className='under-button-text'>already have an account? <a href='/login' className='uppercase'>Sign in</a>.</p>
+                {
+                    this.props.linkTo === 'register' ?
+                        <p className='under-button-text'>don't have an account?
+                            <Link to='/' className='uppercase'> Sign up</Link>.
+                        </p>
+                        :
+                        <p className='under-button-text'>already have an account?
+                            <Link to='/login' className='uppercase'> Sign in</Link>.
+                        </p>
+                }
             </div>
         )
     }

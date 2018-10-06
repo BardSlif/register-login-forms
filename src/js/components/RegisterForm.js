@@ -206,6 +206,7 @@ class RegisterForm extends Component {
         return (
             <form className='sign-up-form'>
                 <Input
+                    window='register'
                     name='name'
                     label='username'
                     type='text'
@@ -216,6 +217,7 @@ class RegisterForm extends Component {
                     errorType={this.state.error.name}
                 />
                 <Input
+                    window='register'
                     name='email'
                     label='email'
                     type='email'
@@ -225,6 +227,7 @@ class RegisterForm extends Component {
                     errorType={this.state.error.email}
                 />
                 <Input
+                    window='register'
                     name='password'
                     label='password'
                     type='password'
@@ -235,6 +238,7 @@ class RegisterForm extends Component {
                     errorType={this.state.error.password}
                 />
                 <Input
+                    window='register'
                     name='confirmPassword'
                     label='confirm password'
                     type='password'
@@ -245,6 +249,7 @@ class RegisterForm extends Component {
                     errorType={this.state.error.confirmPassword}
                 />
                 <Button
+                    linkTo='login'
                     value='Sign up'
                     onSubmit={this._onSubmit}
                 />

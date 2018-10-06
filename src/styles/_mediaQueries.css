@@ -6,10 +6,18 @@
 
     .form-section {
         width: 100%;
+    }
+
+    .register .form-section,
+    .login .form-section {
         background-color: rgba(24, 24, 24, 0.7);
     }
 
-    .section-wrapper {
+    .register .section-wrapper {
+        padding: 30px 8px 10px;
+    }
+
+    .login .section-wrapper {
         padding: 30px 8px 10px;
     }
 
@@ -68,8 +76,12 @@
 }
 
 @media screen and (min-width: 375px) {
-    .section-wrapper {
+    .register .section-wrapper {
         padding: 45px 10px 15px;
+    }
+
+    .login .section-wrapper {
+        padding: 75px 10px 15px;
     }
 
     h1 {
@@ -87,8 +99,12 @@
 }
 
 @media screen and (min-width: 480px) {
-    .section-wrapper {
+    .register .section-wrapper {
         padding: 60px 10px 20px;
+    }
+
+    .login .section-wrapper {
+        padding: 90px 10px 20px;
     }
 
     h1 {
@@ -105,7 +121,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .section-wrapper {
+    .register .section-wrapper {
         padding: 80px 10px 20px;
     }
 
@@ -133,13 +149,24 @@
 
 @media screen and (min-width: 1080px)  {
 
+    .login .section-wrapper {
+        padding: 120px 10px 20px;
+    }
+
     .left {
         width: 50%;
     }
 
     .form-section {
         width: 50%;
+    }
+
+    .register .form-section {
         background-color: rgba(24, 24, 24, 0.2);
+    }
+
+    .login .form-section {
+        background-color: rgba(24, 24, 24, 0.3);
     }
 
     .sign-up-form {

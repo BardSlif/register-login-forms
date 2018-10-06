@@ -6,10 +6,19 @@ body {
     color: var(--standard-color);
 }
 
+h1 {
+    font-weight: var(--font-weight-regular);
+}
+
+h3 {
+    font-weight: var(--font-weight-regular);
+}
+
 .app {
-    height: 100vh;
-    background-image: url('../assets/images/background2.jpg');
-    background-position: center;
+    min-height: 100vh;
+    height: 100%;
+    background-image: url('../assets/images/registerBackground.jpg');
+    background-position: 50% 70%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -17,12 +26,9 @@ body {
 }
 
 .half {
-    width: 50%;
-    border: 1px solid white;
     position: relative;
 }
 
-.form {
-    background-color: #181818;
-    opacity: 0.15;
+.headline {
+    font-family: var(--headline-font);
 }

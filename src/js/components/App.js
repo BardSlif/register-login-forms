@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Form from './Form';
+import FormSection from './FormSection';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <section className='half'>
+        <section className='half left'>
 
         </section>
-        <section class Name='half form'>
-          <Form
-            
+        <section className='half form-section'>
+          <FormSection
+
           />
         </section>
       </div>

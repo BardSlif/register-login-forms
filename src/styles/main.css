@@ -28,8 +28,18 @@
 
 /*
 *
-* BASE
+* COMPONENTS
 *
 *
 */
+
 @import url(_components.css);
+
+/*
+*
+* MEDIA QUERIES
+*
+*
+*/
+
+@import url(_mediaQueries.css);

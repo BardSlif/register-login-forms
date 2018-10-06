@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
+  <title>error</title>
+  <g id="error" data-name="Layer 2">
+    <g id="error-1" data-name="Layer 1" >
+      <path fill='#ff3a3a' class='error-path' d="M32,0A32,32,0,1,0,64,32,32,32,0,0,0,32,0ZM47.6,43.4l-4.2,4.2L32,36.2,20.6,47.6l-4.2-4.2L27.8,32,16.4,20.6l4.2-4.2L32,27.8,43.4,16.4l4.2,4.2L36.2,32Z"/>
+    </g>
+  </g>
+</svg>

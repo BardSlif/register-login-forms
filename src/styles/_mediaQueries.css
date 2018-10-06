@@ -32,8 +32,9 @@
     }
 
     .form-control {
-        font-size: 12px;
+        font-size: var(--small-font-size);
         padding: 12px 0;
+        margin-bottom: 3px;
     }
 
     .form-group {
@@ -82,6 +83,7 @@
     .form-center {
         padding: 10px 0;
     }
+
 }
 
 @media screen and (min-width: 480px) {
@@ -95,6 +97,10 @@
 
     h3 {
         font-size: 1.5rem;
+    }
+
+    .form-control {
+        margin-bottom: 6px;
     }
 }
 
@@ -113,10 +119,6 @@
 
     .form-label {
         font-size: 15px;
-    }
-
-    .info-window {
-        font-size: 12px;
     }
 
     .form-button {
@@ -174,6 +176,10 @@
     .social-link {
         width: 26px;
         height: 26px;
+    }
+
+    .info-window {
+        font-size: var(--small-font-size);
     }
 
     .form-icon {

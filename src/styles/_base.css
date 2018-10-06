@@ -17,8 +17,8 @@ h3 {
 .app {
     min-height: 100vh;
     height: 100%;
-    background-image: url('../assets/images/background2.jpg');
-    background-position: center;
+    background-image: url('../assets/images/registerBackground.jpg');
+    background-position: 50% 70%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

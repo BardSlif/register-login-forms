@@ -1,5 +1,5 @@
 # Register/Login form
-Simple register/login form app based on my Photoshop project which can be found here []. This project contains register front-end validation based on regex and length of words.
+Simple register/login form app based on my design project. This project contains register front-end validation based on regex and length of words.
 
 # Usage 
 Validation works on every user input and displays proper icon and information. Beside that app is set to display information in console when submit button is clicked. If you plan to use these forms please make proper changes for safety issues ! 

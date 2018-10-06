@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Button from './Button';
+import {hasNull, hasEmpty} from '../functions/functions';
 
 class RegisterForm extends Component {
 
@@ -155,24 +156,6 @@ class RegisterForm extends Component {
 
     }
 
-    hasNull = (obj) => {
-        for (const child in obj) {
-            if (obj[child] !== null) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    hasEmpty = (obj) => {
-        for (const child in obj) {
-            if (obj[child] === '') {
-                return true;
-            }
-        }
-        return false;
-    }
-
     _emailRegEx = (email) => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
@@ -194,7 +177,7 @@ class RegisterForm extends Component {
         const error = this.state.error;
         console.log(user);
         console.log(error);
-        if (!this.hasEmpty(user) && this.hasNull(error)) {
+        if (!hasEmpty(user) && hasNull(error)) {
             console.log('All correct!');
         }
         else {
@@ -204,7 +187,7 @@ class RegisterForm extends Component {
 
     render() {
         return (
-            <form className='sign-up-form'>
+            <form className='sign-form'>
                 <Input
                     window='register'
                     name='name'

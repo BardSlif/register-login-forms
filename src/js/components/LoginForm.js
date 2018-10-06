@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Button from './Button';
+import { hasEmpty } from '../functions/functions';
 
 class FormSection extends Component {
 
@@ -23,20 +24,11 @@ class FormSection extends Component {
 
     }
 
-    hasEmpty = (obj) => {
-        for (const child in obj) {
-            if (obj[child] === '') {
-                return true;
-            }
-        }
-        return false;
-    }
-
     _onSubmit = (evt) => {
         evt.preventDefault();
         const user = this.state.user;
         console.log(user);
-        if (!this.hasEmpty(user)) {
+        if (!hasEmpty(user)) {
             console.log('All correct!');
         }
         else {
@@ -46,7 +38,7 @@ class FormSection extends Component {
 
     render() {
         return (
-            <form className='sign-up-form'>
+            <form className='sign-form'>
                 <Input
                     name='name'
                     label='username or email'
@@ -65,7 +57,7 @@ class FormSection extends Component {
                 />
                 <Button
                     linkTo='register'
-                    value='Sign up'
+                    value='Sign in'
                     onSubmit={this._onSubmit}
                 />
             </form>

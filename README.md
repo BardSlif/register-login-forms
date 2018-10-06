@@ -4,6 +4,9 @@ Simple register/login form app based on my design project. This project contains
 # Usage 
 Validation works on every user input and displays proper icon and information. Beside that app is set to display information in console when submit button is clicked. If you plan to use these forms please make proper changes for safety issues ! 
 
+# Live project
+You can check the project [HERE](https://bardslif.github.io/register-login-forms/)
+
 ## How to run project in development mode? 
 To use this project in development mode: 
 * Download or clone the project 

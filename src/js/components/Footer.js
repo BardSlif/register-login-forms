@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+/*
+* Footer with socials
+*/
+
 class Footer extends Component {
     render() {
         return (

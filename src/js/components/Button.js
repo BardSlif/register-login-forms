@@ -14,6 +14,7 @@ class Button extends Component {
             <div className='form-center'>
                 <input className='form-button' type="submit" value={this.props.value} onClick={this.onSubmitButton} />
                 {
+                    //Link to proper window - login or register
                     this.props.linkTo === 'register' ?
                         <p className='under-button-text'>don't have an account?
                             <Link to='/' className='uppercase'> Sign up</Link>.

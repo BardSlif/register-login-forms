@@ -4,6 +4,10 @@ import Footer from './Footer';
 import RegisterForm from './RegisterForm';
 import LoginForm from './LoginForm';
 
+/*
+* Form wrapper with proper titles, subtitles and forms
+*/
+
 class FormSection extends Component {
 
     render() {

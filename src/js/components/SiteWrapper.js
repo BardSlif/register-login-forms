@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import FormSection from './FormSection';
 import { Route } from 'react-router-dom';
 
+/*
+* site wrapper for login and register form 
+*/
 class SiteWrapper extends Component {
     render() {
         return (

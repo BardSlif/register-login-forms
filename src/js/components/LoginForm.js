@@ -3,14 +3,21 @@ import Input from './Input';
 import Button from './Button';
 import { hasEmpty } from '../functions/functions';
 
-class FormSection extends Component {
+/*
+* Login form
+*/
 
+class LoginForm extends Component {
+
+    //State for login form
     state = {
         user: {
             name: '',
             password: ''
         }
     }
+
+    //handle text input on change
 
     _handleTextInputChange = (evt) => {
         const target = evt.target;
@@ -24,10 +31,14 @@ class FormSection extends Component {
 
     }
 
+    //handle submit 
+
     _onSubmit = (evt) => {
         evt.preventDefault();
         const user = this.state.user;
+        //display in console log information about inputs
         console.log(user);
+        //if there is empty field also display in console.log
         if (!hasEmpty(user)) {
             console.log('All correct!');
         }
@@ -65,4 +76,4 @@ class FormSection extends Component {
     }
 }
 
-export default FormSection;
+export default LoginForm;

@@ -3,8 +3,12 @@ import Input from './Input';
 import Button from './Button';
 import {hasNull, hasEmpty} from '../functions/functions';
 
-class RegisterForm extends Component {
+/*
+* Register form with validation
+*/
 
+class RegisterForm extends Component {
+//display state of user inputs and type of errors in register fields
     state = {
         user: {
             name: '',
@@ -20,6 +24,8 @@ class RegisterForm extends Component {
         }
     }
 
+    //handle text input 
+
     _handleTextInputChange = (evt) => {
         const target = evt.target;
 
@@ -33,6 +39,8 @@ class RegisterForm extends Component {
         });
 
     }
+
+    //choose proper validation type
 
     _validationType = (name) => {
 
@@ -59,6 +67,8 @@ class RegisterForm extends Component {
         }
     }
 
+    //validate username
+
     _validateUsername = (name) => {
 
         let errorType = '';
@@ -82,6 +92,8 @@ class RegisterForm extends Component {
             }
         }));
     }
+
+    //validate email 
 
     _validateEmail = (email) => {
 
@@ -108,6 +120,8 @@ class RegisterForm extends Component {
         }));
     }
 
+    //validate password
+
     _validatePassword = (password) => {
         let errorType = '';
 
@@ -130,6 +144,8 @@ class RegisterForm extends Component {
             }
         }), () => this._confirmPassword());
     }
+
+    //confirm password
 
     _confirmPassword = () => {
         let errorType = '';
@@ -156,6 +172,8 @@ class RegisterForm extends Component {
 
     }
 
+    //RegEX for password, email, username
+
     _emailRegEx = (email) => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
@@ -171,12 +189,16 @@ class RegisterForm extends Component {
         return reg.test(password);
     }
 
+    //handle button click
+
     _onSubmit = (evt) => {
         evt.preventDefault();
         const user = this.state.user;
         const error = this.state.error;
+        //display user obj and error in console
         console.log(user);
         console.log(error);
+        //check if all infos is ok and there is no empty inputs
         if (!hasEmpty(user) && hasNull(error)) {
             console.log('All correct!');
         }

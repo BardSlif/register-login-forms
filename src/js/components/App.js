@@ -4,6 +4,10 @@ import SiteWrapper from './SiteWrapper';
 
 class App extends Component {
   render() {
+    /*
+    * / route leads to register window, /login route leads to login window
+    * with proper background image
+    */
     return (
       <div className="app">
         <Route exact path='/' render={() => (

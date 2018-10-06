@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import Button from './Button';
 
 class RegisterForm extends Component {
 
@@ -197,7 +198,7 @@ class RegisterForm extends Component {
             console.log('All correct!');
         }
         else {
-            console.log('something is wrong');
+            console.log('Something is wrong');
         }
     }
 
@@ -240,12 +241,13 @@ class RegisterForm extends Component {
                     placeholder='Confirm your password'
                     value={this.state.user.confirmPassword}
                     onHandleTextInputChange={this._handleTextInputChange}
+                    info='Passwords dont match'
                     errorType={this.state.error.confirmPassword}
                 />
-                <div className='form-center'>
-                    <input className='form-button' type="submit" value="Sign up" onClick={this._onSubmit} />
-                    <p className='under-button-text'>already have an account? <a href='/login' className='uppercase'>Sign in</a>.</p>
-                </div>
+                <Button
+                    value='Sign up'
+                    onSubmit={this._onSubmit}
+                />
             </form>
         )
     }
